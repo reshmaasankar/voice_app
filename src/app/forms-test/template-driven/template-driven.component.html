@@ -1,0 +1,32 @@
+<!-- <div class="container-fluid">
+    <form #testForm="ngForm">
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" ngModel #fn="ngModel" class="form-control" name="fname" required minlength="4">
+            <span *ngIf="fn.errors">This is required</span>
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="number" ngModel class="form-control" name="lname" min="7" required>
+        </div>
+        <button type="button" [disabled]="!testForm.valid" (click)="sbtClick(testForm)">Click</button>
+    </form>
+</div>
+<div>
+    <form [formGroup]="testForms">
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" class="form-control" formControlName="firname">
+            <label>Last Name</label>
+            <input type="text" class="form-control" formControlName="laName">
+        </div>
+        <div formGroupName="myadd">
+            <div class="form-group">
+                <label>First name</label>
+                <input type="text" class="form-control" formControlName="mycity">
+            </div>
+        </div>
+        <button type="button" [disabled]="!testForms.valid" (click)="sbtClickReactive()">Click</button>
+
+    </form>
+</div> -->

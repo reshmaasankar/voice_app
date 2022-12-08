@@ -1,0 +1,34 @@
+<!-- <div class="constainer-fluid">
+    <form #testForm="ngForm">
+        <div class="form-gropup">
+            <label class="">First name</label>
+            <input type="text" class="form-control" #fn="ngModel" required minlength="5" ngModel name="fname">
+            <span style="color: red; font-size: 12px;" *ngIf="fn.touched && fn.errors">Required</span>
+        </div>
+        <div class="form-gropup">
+            <label>Last name</label>
+            <input type="text" class="form-control" ngModel name="lname" #ln="ngModel">
+        </div>
+        <button (click)="submit(testForm)" [disabled]="!testForm.valid">Submit</button>
+    </form>
+</div> -->
+
+<div class="constainer-fluid">
+    <form [formGroup]="testGrp">
+        <div class="form-gropup">
+            <label class="">First name</label>
+            <input type="text" class="form-control" formControlName="fname">
+        </div>
+        <div class="form-gropup">
+            <label>Last name</label>
+            <input type="text" class="form-control" formControlName="lname">
+        </div>
+        <div formGroupName="myadd">
+            <div class="form-group">
+                <label>City</label>
+                <input type="text" class="form-control" formControlName="mycity">
+            </div>
+        </div>
+        <button (click)="submitForm()" [disabled]="!testGrp.valid">Submit</button>
+    </form>
+</div>

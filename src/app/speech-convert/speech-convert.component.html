@@ -1,0 +1,46 @@
+<!-- <div style="margin: 100px;">
+    <h1>Voice recognition</h1>
+    <button style="margin: 10px;" (click)="startService()">Start</button>
+    <button style="margin: 10px;" (click)="stopService()">Stop</button>
+    <p>{{service.text}}</p>
+</div>
+<button (click)="getData()">Download</button> -->
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12 text-center">
+            <div class="row">
+                <div class="col-4"> </div>
+                <div class="col-4">
+                    <div class="row text-center top-div">
+                        <div class="col-12">
+                            <img src='./assets/images/logo.svg'>
+                        </div>
+                        <div class="col-12">
+                            <p style="font-size: 27px;font-weight: 700;">Voice Recognition</p>
+                        </div>
+                    </div>
+                    <div class="form-group row mt-4">
+                        <div class="col-12">
+                            <img [src]='imageIcon' style="height : 45px; width: 40px;cursor: pointer;"
+                                (click)="rcdClick(isRecord)" triggers="mouseenter:mouseleave" popoverClass="popover-cls"
+                                [ngbPopover]="tip" placement="right">
+                        </div>
+                        <div class="col-12">
+                            <span style="font-size: 16px;font-weight: 600;">{{txt}}</span>
+                        </div>
+
+                    </div>
+                    <div class="form-group mt-4">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                            placeholder="Words comes here...">{{service.text}}</textarea>
+                    </div>
+                </div>
+                <div class="col-4"> </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #tip>
+    <p style="color: rgb(74, 149, 235); font-size: 15px;">Start recording and say "download" and stop the recording to
+        download an image... </p>
+</ng-template>
